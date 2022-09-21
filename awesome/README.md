@@ -1,6 +1,6 @@
 # Awesome WM
 
-The main config is in **rc.lua** - this is the file *awesome* expects. Everything is included into it with `require("folder.module")` directives. Things you can change there are at the end of the file: *useless gaps*, *autostart* location.
+The main config is in **rc.lua** - this is the file *awesome* expects. Everything is included into it with `require("folder.module")` directives. Things you can change there are at the end of the file: *useless gaps*, *autorun* location.
 
 * **mytheme.lua** - theme file with colors and stuff;
 
@@ -26,6 +26,7 @@ The main config is in **rc.lua** - this is the file *awesome* expects. Everythin
 * * * `Super+D` - spawn the apps launcher (rofi);
 * * * `Super+R` - prompt to launch a program;
 * * * `Alt+Shift` - change the keyboard layout;
+* * * `Super+Shift+Arrows` - move the focused window around;
 * * * `Super+Ctrl+R` - restart *awesome* (to reload the config);
 
 * **deco** module:

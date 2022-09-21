@@ -91,4 +91,4 @@ beautiful.useless_gap = RC.vars.gap_size
 beautiful.gap_single_client = true
 
 -- Autostart
-awful.spawn.with_shell("~/.config/autorun.sh")
+awful.spawn.with_shell("~/.config/.autorun.sh")
