@@ -15,6 +15,10 @@ super + d
 super + w
     ~/.config/eww/dashboard/launch_dashboard
 
+# power menu
+super + x
+    rofi -show p -modi "p:rofi-power-menu --choices=shutdown/reboot/logout/lockscreen/hibernate/suspend" -theme themes/power-menu.rasi
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

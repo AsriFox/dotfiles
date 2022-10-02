@@ -15,6 +15,6 @@ bspc config focus_follows_pointer true
 bspc rule -a Screenkey manage=off
 
 # Autorun
-~/.config/.autorun.sh
+exec $HOME/.config/.autorun.sh &
 sleep 1
-~/.config/polybar/launch.sh
+exec $HOME/.config/polybar/launch.sh &
