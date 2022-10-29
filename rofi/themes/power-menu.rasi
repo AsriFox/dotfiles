@@ -1,6 +1,6 @@
 /* Import the local modified theme */
 @import "gruvbox-dark-soft.rasi"
 window {
-    height: 15%;
+    height: 17%;
     width: 15%;
 }

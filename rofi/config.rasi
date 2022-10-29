@@ -25,5 +25,4 @@ element-icon {
   background-color: transparent;
 }
 
-@import "themes/shared/active-colorscheme.rasi"
-@theme "themes/gruvbox-dark-soft.rasi"
+@theme "/home/asrifox/.config/rofi/themes/gruvbox-dark-soft.rasi"

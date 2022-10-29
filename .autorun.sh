@@ -16,7 +16,7 @@ dunst &
     { pgrep lxpolkit || lxpolkit & } } || \
     dunstify "Couldn't find lxpolkit!"
 
-picom -b && \
-nitrogen --restore && \
-run nm-applet
+picom -b &
+nitrogen --restore
+#run nm-applet
 #run blueman-applet

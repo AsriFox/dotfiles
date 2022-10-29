@@ -1,10 +1,10 @@
 from libqtile.config import Key, Drag, Click
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+#from libqtile.utils import guess_terminal
 
 mod = "mod4"
 fileman = "dolphin"
-terminal = guess_terminal()
+terminal = "kitty" #guess_terminal()
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -47,6 +47,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Show the apps launcher"),
+    Key([mod], "x", lazy.spawn("rofi -show p -modi \"p:rofi-power-menu --choices=shutdown/reboot/logout/lockscreen/hibernate/suspend\" -theme themes/power-menu.rasi"), desc="Show the shutdown/logout menu")
 ]
 
 from workspaces import groups, go_to_group
