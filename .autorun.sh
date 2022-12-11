@@ -12,8 +12,9 @@ run() {
 
 dunst &
 
-{ command -v lxpolkit && \
-    { pgrep lxpolkit || lxpolkit & } } || \
+polkit=/usr/lib/lxpolkit/lxpolkit
+{ command -v $polkit && \
+    { pgrep $polkit || $polkit & } } || \
     dunstify "Couldn't find lxpolkit!"
 
 picom -b &
