@@ -3,21 +3,23 @@
 run() {
     if ! pgrep $1 
     then
-        "$@"
+        "$@" &
     fi
 }
 
-#try_run /usr/lib/polkit-kde-authentication-agent-1
-#try_run /usr/lib/policykit-1-gnome/polkit-gnome-authentification-agent-1
+run dunst &
 
-dunst &
-
-polkit=/usr/lib/lxpolkit/lxpolkit
-{ command -v $polkit && \
-    { pgrep $polkit || $polkit & } } || \
+#polkit=/usr/lib/polkit-kde-authentication-agent-1
+#polkit=/usr/lib/policykit-1-gnome/polkit-gnome-authentification-agent-1
+polkit="$(command -v lxpolkit)"
+if [ -z "$polkit" ]
+then
     dunstify "Couldn't find lxpolkit!"
+else
+    run $polkit
+fi
 
-picom -b &
-nitrogen --restore
+run picom -b
+run nitrogen --restore
 #run nm-applet
 #run blueman-applet

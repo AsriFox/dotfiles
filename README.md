@@ -2,28 +2,28 @@
 Heavily WIP
 
 ### Programs used:
-* **shell**: zsh
-* **window manager**: [awesome](https://awesomewm.org/) / [qtile](http://www.qtile.org/)
-* **compositor**: picom
-* **terminal**: alacritty
+* **shell**: bash
+* **window managers**: 
+    * [hyprland](https://hyprland.org/)
+    * [qtile](http://www.qtile.org/)
+    * [openbox](http://openbox.org/)
+    * [awesome](https://awesomewm.org/)
+* **compositor**: [picom](https://github.com/jonaburg/picom)
+* **terminal**: kitty / alacritty
 * **notifications**: dunst
-* **launcher**: [rofi](https://github.com/davatorium/rofi)
-* **display configuration**: arandr
-* **wallpaper setter**: nitrogen
+* **bar**: tint2 (openbox) / polybar (hyprland)
+* **launcher**: [rofi](https://github.com/davatorium/rofi) / [wofi](https://hg.sr.ht/~scoopta/wofi)
+* **display configuration**: arandr / wev
+* **wallpaper setter**: nitrogen / hyprpaper
 
 Auxiliary:
+* **AUR helper**: [Amethyst](https://getcryst.al/site/docs/amethyst/getting-started)
 * **network**: NetworkManager ([archwiki](https://wiki.archlinux.org/title/NetworkManager), [ubuntu](https://www.ubuntuupdates.org/package/core/jammy/main/base/network-manager-applet))
-* **sound control**: amixer, pacmd (for *pulseaudio*)
+* **sound control**: amixer, pavucontrol (for *pulseaudio*)
 * **battery**: acpi
 
 * *shell theme*: [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-* *rofi theme*: arthur (included in *rofi-theme-selector*)
-
-### Included configs:
-* awesome
-* qtile
-* picom (shadows are disabled for window gaps to shine)
-* alacritty (background transparency requires running *picom -b*)
+* *rofi theme*: customized *gruvbox-dark-soft*
 
 ### Scripts:
 * *autorun* - the programs to launch at session startup
