@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if ! pgrep eww
-then
-    eww daemon
-    sleep 1
-fi
-
-eww open bar && bspc config -m LVDS-1-1 top_padding 21
