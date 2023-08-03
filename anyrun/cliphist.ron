@@ -1,0 +1,5 @@
+Config {
+    max_entries: 10,
+    cliphist_path: "cliphist",
+    prefix: "",
+}
