@@ -1,0 +1,16 @@
+(defwidget powermenu []
+    (box :orientation "h" :space-evenly "true" :spacing "4" :class "module"
+        (button :class "powermenu_button" :halign "center" :valign "center"
+                :onclick "hyprctl dispatch exit"
+            (label :text "⇠")
+        )
+        (button :class "powermenu_button" :halign "center" :valign "center"
+                :onclick "exec systemctl reboot"
+            (label :text "")
+        )
+        (button :class "powermenu_button" :halign "center" :valign "center"
+                :onclick "exec systemctl poweroff -i"
+            (label :text "󰐥")
+        )
+    )
+)
