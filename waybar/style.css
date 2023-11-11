@@ -1,0 +1,41 @@
+* {
+  font-family: FiraCode Nerd Font;
+  font-weight: 600;
+  font-size: 14px;
+  color: @theme_fg_color;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+tooltip {
+  background: alpha(@theme_base_color, 0.8);
+}
+
+#clock,
+#language,
+#cpu,
+#memory,
+#wireplumber,
+#tray {
+  background: alpha(@theme_base_color, 0.8);
+  padding: 0 10px;
+  margin: 3px 0;
+  border: 0;
+}
+
+#clock {
+  border-radius: 18px;
+}
+
+#language {
+  border-radius: 18px 0 0 18px;
+}
+
+#custom-pacman,
+#idle_inhibitor {
+  color: @theme_base_color;
+  padding-left: 10px;
+}
+

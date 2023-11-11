@@ -1,0 +1,49 @@
+{
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 2
+  },
+
+  "memory": {
+    "format": "󰘚 {percentage}%",
+    "interval": 2
+  },
+
+  "wireplumber": {
+    "format": "󰕾 {volume}%",
+    "format-muted": "󰸈",
+    "scroll-step": 5
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
+
+  "hyprland/language": {
+    "format-en": "EN",
+    "format-ru-typewriter": "RU"
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    },
+    "tooltip-format-activated": "NO SLEEP",
+    "tooltip-format-deactivated": "Sleep"
+  },
+  
+  "custom/pacman": {
+    "exec": "$HOME/.config/waybar/checkupdates.sh",
+    "format": "{}",
+    "interval": 600,
+    "signal": 1
+  }
+}
