@@ -23,6 +23,7 @@
 * **Wallpaper(s)**:
   * **images**: [hyprpaper](https://github.com/hyprwm/hyprpaper)
   * **videos**: [mpvpaper](https://github.com/GhostNaN/mpvpaper)
+* **Screen locker**: [swaylock-effects](https://github.com/jirutka/swaylock-effects)
 * **On-screen popups**: [SwayOSD](https://github.com/ErikReider/SwayOSD)
 * **Firefox**: [GNOME theme](https://github.com/rafaelmardojai/firefox-gnome-theme)
 
