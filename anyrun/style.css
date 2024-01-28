@@ -1,3 +1,32 @@
-window {
-  background: transparent;
+#entry {
+  background-color: alpha(#24273a, 0.8);
+  border: 2px solid #24273a;
+  border-radius: 8px;
+  color: #cad3f5;
+}
+
+#main {
+  background-color: transparent;
+  border-radius: 8px;
+  color: #cad3f5;
+  font: 14px monospace;
+}
+
+#plugin {
+  background-color: transparent;
+}
+
+#match {
+  background-color: alpha(#24273a, 0.8);
+  border-radius: 5px;
+  color: #cad3f5;
+}
+
+#match:selected {
+  background-color: alpha(#8aadf4, 0.8);
+  border-radius: 5px;
+}
+
+#window {
+  background: none;
 }

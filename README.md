@@ -16,6 +16,7 @@
 * **Notifications**: [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter)
 * **Bar**: [waybar](https://github.com/Alexays/Waybar)
 * **Launcher**: [anyrun](https://github.com/Kirottu/anyrun)
+  * *Applications* plugin with search history ([PR](https://github.com/Kirottu/anyrun/pull/116))
   * [*Clipboard history*](https://github.com/benoitlouy/anyrun-cliphist) plugin
   * [*Hyprland windows*](https://github.com/AsriFox/anyrun-hyprland) plugin
 * **Powermenu**: [wlogout](https://github.com/ArtsyMacaw/wlogout)
