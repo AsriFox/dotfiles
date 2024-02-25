@@ -1,0 +1,51 @@
+window.bar {
+  font-family: FiraCode Nerd Font;
+  font-weight: 600;
+  font-size: 14px;
+  background: transparent;
+  color: @theme_fg_color;
+}
+
+button {
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+}
+
+button:active {
+  background-color: @theme_selected_bg_color;
+}
+
+button:hover {
+  border-bottom: 3px solid @theme_fg_color;
+}
+
+label {
+  font-weight: bold;
+}
+
+.workspaces button.focused {
+  border-bottom: 3px solid @theme_selected_bg_color;
+}
+
+.client-title {
+  color: @theme_selected_bg_color;
+}
+
+.clock {
+  background: alpha(@theme_base_color, 0.8);
+  padding: 0 10px;
+  margin: 3px 0;
+  border: 0;
+  border-radius: 18px;
+}
+
+.notification {
+  color: yellow;
+}
+
+progress,
+highlight {
+  min-height: 8px;
+}
