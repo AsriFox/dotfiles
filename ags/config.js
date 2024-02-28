@@ -3,6 +3,7 @@ const audio = await Service.import('audio');
 const systemtray = await Service.import('systemtray');
 import { exec } from 'resource:///com/github/Aylur/ags/utils.js';
 import { MonitorRoundedCorners } from './modules/roundedCorners.js';
+import { NotificationPopups } from './modules/notificationPopups.js';
 
 const date = Variable('', {
   poll: [1000, 'date "+%H:%M:%S"'],
@@ -176,6 +177,7 @@ export default {
   style: './style.css',
   windows: [
     Bar(1),
+    NotificationPopups(),
     ...MonitorRoundedCorners(),
   ],
 }

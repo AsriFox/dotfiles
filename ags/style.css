@@ -1,3 +1,5 @@
+@import url("./styles/notificationPopups.css");
+
 window.bar {
   font-family: FiraCode Nerd Font;
   font-weight: 600;
@@ -41,10 +43,6 @@ button {
 
 .client-title {
   color: @theme_selected_bg_color;
-}
-
-.notification {
-  color: yellow;
 }
 
 progress,

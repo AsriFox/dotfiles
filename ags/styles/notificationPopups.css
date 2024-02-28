@@ -1,0 +1,58 @@
+window#notifications {
+  all: unset;
+}
+
+.notifications .icon {
+  min-width: 32px;
+  min-height: 32px;
+  margin: 6px;
+  margin-right: 1em;
+}
+
+.notifications .icon image {
+  font-size: 22px;
+  color: @theme_fg_color;
+}
+
+.notifications .icon box {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 6px;
+}
+
+.notifications .notification {
+  min-width: 320px;
+  border-radius: 18px;
+  margin: 9px 18px;
+  padding: 0;
+  background-color: @theme_bg_color;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  border: 2px solid @wm_borders_edge;
+}
+
+.notifications .notification.critical {
+  border: 2px solid lightcoral;
+}
+
+.notifications .title {
+  color: @theme_fg_color;
+  font-size: 14px;
+  margin: 6px;
+}
+
+.notifications .body {
+  color: @theme_unfocused_fg_color;
+  margin: 6px;
+}
+
+.notifications .actions .action-button {
+  margin: 0;
+}
+
+.notifications .actions .action-button:first-child {
+  border-bottom-left-radius: 18px;
+}
+
+.notifications .actions .action-button:last-child {
+  border-bottom-right-radius: 18px;
+}
