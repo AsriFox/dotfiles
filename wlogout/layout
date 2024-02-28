@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock --grace 3",
+    "action" : "loginctl lock-session",
     "keybind" : "l"
 }
 {
