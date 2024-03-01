@@ -1,33 +1,5 @@
+@import url("./styles/statusBar.css");
 @import url("./styles/notificationPopups.css");
-
-window.bar {
-  font-family: FiraCode Nerd Font;
-  font-weight: 600;
-  font-size: 14px;
-  background: transparent;
-  color: @theme_fg_color;
-}
-
-.clock {
-  background: alpha(@theme_base_color, 0.8);
-  border-radius: 18px;
-  padding: 6px 10px;
-  margin: 3px 0;
-}
-
-.bar-left {
-  background: alpha(@theme_base_color, 0.8);
-  border-radius: 0 18px 18px 0;
-  padding: 0 10px;
-  margin: 3px 0;
-}
-
-.bar-right {
-  background: alpha(@theme_base_color, 0.8);
-  border-radius: 18px 0 0 18px;
-  padding: 0 10px;
-  margin: 3px 0;
-}
 
 button {
   min-width: 0;
@@ -35,14 +7,6 @@ button {
   padding-top: 0;
   padding-bottom: 0;
   background-color: transparent;
-}
-
-.workspaces button.focused {
-  background-color: @theme_fg_color;
-}
-
-.client-title {
-  color: @theme_selected_bg_color;
 }
 
 progress,

@@ -1,4 +1,4 @@
-import { notifications } from 'resource:///com/github/Aylur/ags/service/notifications.js';
+import notifications from 'resource:///com/github/Aylur/ags/service/notifications.js';
 const popups = notifications.bind('popups');
 
 /** @param {import('resource:///com/github/Aylur/ags/service/notifications.js').Notification} n */
