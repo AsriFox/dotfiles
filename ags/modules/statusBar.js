@@ -1,6 +1,7 @@
 import hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 import audio from 'resource:///com/github/Aylur/ags/service/audio.js';
 import systemtray from 'resource:///com/github/Aylur/ags/service/systemtray.js';
+import { exec } from 'resource:///com/github/Aylur/ags/utils.js';
 
 const date = Variable('', {
   poll: [1000, 'date "+%H:%M:%S"'],
