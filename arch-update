@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Check for updates in Arch Linux and send a notification if present
+updates=$(checkupdates 2>/dev/null)
+kernel_updates=$(echo $updates | grep linux)
+update_count=$(echo $updates | wc -l)
+
+if [[ -z $updates ]]; then
+  exit
+fi
+
+if [[ -n $kernel_updates ]]; then
+  urgency=critical
+else
+  urgency=normal
+fi
+
+action=$(notify-send \
+  --urgency=$urgency \
+  --icon=system-software-update \
+  --wait \
+  --action=YES="Open terminal" \
+  "${update_count} updates detected" \
+  $kernel_updates \
+)
+
+if [[ -n $(command -v ame) ]]; then
+  update_cmd="ame"
+else
+  update_cmd="sudo pacman -Syu"
+fi
+
+if [[ $action == "YES" ]]; then
+  xdg-terminal-exec $update_cmd &
+fi
+
