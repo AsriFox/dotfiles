@@ -1,5 +1,5 @@
 import { StatusBar } from './modules/statusBar.js';
-import { NotificationPopups } from './modules/notificationPopups.js';
+import { NotificationPopups } from './modules/notifications.js';
 import { MonitorRoundedCorners } from './modules/roundedCorners.js';
 
 export default {
