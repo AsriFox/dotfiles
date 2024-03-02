@@ -1,58 +1,88 @@
 window#notifications {
   all: unset;
+  font-family: FiraCode Nerd Font;
 }
 
-.notifications .icon {
-  min-width: 32px;
-  min-height: 32px;
+window#notifications-list {
+  all: unset;
+  font-family: FiraCode Nerd Font;
+}
+
+.notifications {
+  padding: 1px;
+}
+
+.notifications-list {
+  padding: 1px;
+  min-width: 384px;
+  min-height: 1440px;
+  background-image: linear-gradient(to left, alpha(@theme_bg_color, 0.75), alpha(@theme_bg_color, 0.75) 50%, alpha(@theme_bg_color, 0.0) 75%);
+}
+
+.notification .icon {
+  min-width: 54px;
+  min-height: 54px;
   margin: 6px;
   margin-right: 1em;
 }
 
-.notifications .icon image {
-  font-size: 22px;
+.notification .icon image {
+  font-size: 44px;
   color: @theme_fg_color;
 }
 
-.notifications .icon box {
-  min-width: 32px;
-  min-height: 32px;
+.notification .icon box {
+  min-width: 54px;
+  min-height: 54px;
   border-radius: 6px;
 }
 
-.notifications .notification {
+.notification {
   min-width: 320px;
   border-radius: 18px;
   margin: 9px 18px;
   padding: 0;
   background-color: @theme_bg_color;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 1px alpha(black, 0.3), 0 1px 3px 1px alpha(black, 0.7), 0 2px 6px 2px alpha(black, 0.3);
   border: 2px solid @wm_borders_edge;
 }
 
-.notifications .notification.critical {
+.notification.critical {
   border: 2px solid lightcoral;
 }
 
-.notifications .title {
+.notification .title {
   color: @theme_fg_color;
   font-size: 14px;
   margin: 6px;
 }
 
-.notifications .body {
+.notification .body {
   color: @theme_unfocused_fg_color;
+  font-size: 12px;
   margin: 6px;
 }
 
-.notifications .actions .action-button {
-  margin: 0;
+.notification .close-button {
+  margin-top: 2px;
+  margin-right: 2px;
+  padding: 1px;
+  border-radius: 12px;
+  font-size: 20px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
-.notifications .actions .action-button:first-child {
+.notification .actions .action-button {
+  margin: 0;
+  padding: 3px;
+  font-size: 14px;
+}
+
+.notification .actions .action-button:first-child {
   border-bottom-left-radius: 18px;
 }
 
-.notifications .actions .action-button:last-child {
+.notification .actions .action-button:last-child {
   border-bottom-right-radius: 18px;
 }

@@ -1,5 +1,5 @@
 import { StatusBar } from './modules/statusBar.js';
-import { NotificationPopups } from './modules/notifications.js';
+import { NotificationPopups, NotificationsList } from './modules/notifications.js';
 import { MonitorRoundedCorners } from './modules/roundedCorners.js';
 
 export default {
@@ -7,6 +7,7 @@ export default {
   windows: [
     StatusBar(1),
     NotificationPopups(),
+    NotificationsList(),
     ...MonitorRoundedCorners(),
   ],
 }
