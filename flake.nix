@@ -8,6 +8,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:Stonks3141/ctp-nix";
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -39,6 +41,7 @@
             }
             ./shell-programs.nix
             ./hyprland.nix
+            ./hyprlock.nix
           ];
           extraSpecialArgs = { inherit inputs; };
         };
