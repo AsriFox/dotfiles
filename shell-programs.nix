@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }:
+let catppuccin = with config.catppuccin; { inherit enable flavour; };
+in {
   home.packages = with pkgs; [ rustup gcc nixfmt ];
 
   home.sessionVariables = {
@@ -15,6 +17,7 @@
 
   programs.fish = {
     enable = true;
+    inherit catppuccin;
     functions = {
       nvim = "~/.nix-profile/bin/nvim -u ~/.config/nvim/init.lua $argv";
       cat = "bat --paging never --style plain $argv";
@@ -24,18 +27,26 @@
 
   programs.bat = {
     enable = true;
+    inherit catppuccin;
     config = { pager = "${pkgs.less}/bin/less -FR"; };
   };
 
   programs.neovim.enable = true;
 
-  programs.lazygit.enable = true;
+  programs.lazygit = {
+    enable = true;
+    catppuccin = with config.catppuccin; {
+      inherit enable flavour;
+      accent = "lavender";
+    };
+  };
 
   programs.kitty = {
     enable = true;
     font.name = "FiraCode Nerd Font";
     font.size = 12;
     shellIntegration.enableFishIntegration = true;
+    inherit catppuccin;
     settings = {
       background_opacity = "0.75";
       shell = "fish";
@@ -50,6 +61,7 @@
     enable = true;
     enableFishIntegration = true;
     enableTransience = true;
+    inherit catppuccin;
     settings = {
       format =
         "$username$hostname$directory$cmd_duration$line_break$python$character";

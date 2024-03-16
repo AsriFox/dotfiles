@@ -32,6 +32,7 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      env = [ "QT_QPA_PLATFORMTHEME,qt5ct" ];
       monitor = [
         "DP-1, preferred, 0x0, 1"
         "DP-2, preferred, 2560x480, 1"
@@ -61,16 +62,16 @@ in {
         follow_mouse = 1;
       };
 
-      general = {
+      general = with config.catppuccin.palette; {
         gaps_in = 4;
         gaps_out = 4;
         border_size = 2;
-        "col.active_border" = "rgba(f0c6c6ee) rgba(b7bdf8ee) 45deg";
-        "col.inactive_border" = "rgba(5b6078aa)";
+        "col.active_border" = "0xff${flamingo} 0xff${lavender} 45deg";
+        "col.inactive_border" = "0xaa${surface0}";
         layout = "dwindle";
       };
 
-      decoration = {
+      decoration = with config.catppuccin.palette; {
         rounding = 4;
 
         blur = {
@@ -82,7 +83,7 @@ in {
         drop_shadow = "yes";
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        "col.shadow" = "0xee${surface0}";
       };
 
       animations = {

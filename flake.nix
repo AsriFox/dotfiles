@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:Stonks3141/ctp-nix";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -28,6 +29,13 @@
               };
               xdg.enable = true;
               programs.home-manager.enable = true;
+            }
+            {
+              imports = [ ./catppuccin.nix ];
+              catppuccin = {
+                enable = true;
+                flavour = "macchiato";
+              };
             }
             ./shell-programs.nix
             ./hyprland.nix
