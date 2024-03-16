@@ -18,16 +18,20 @@
       homeConfigurations.${username} =
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [{
-            # home-manager configuration
-            home = {
-              inherit username;
-              homeDirectory = "/home/${username}";
-              stateVersion = "23.11";
-            };
-            xdg.enable = true;
-            programs.home-manager.enable = true;
-          }];
+          modules = [
+            {
+              # home-manager configuration
+              home = {
+                inherit username;
+                homeDirectory = "/home/${username}";
+                stateVersion = "23.11";
+              };
+              xdg.enable = true;
+              programs.home-manager.enable = true;
+            }
+            ./shell-programs.nix
+            ./hyprland.nix
+          ];
           extraSpecialArgs = { inherit inputs; };
         };
     };

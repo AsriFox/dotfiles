@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [ rustup gcc ];
+  home.packages = with pkgs; [ rustup gcc nixfmt ];
 
   home.sessionVariables = {
     XCURSOR_SIZE = 24;
@@ -43,6 +43,8 @@
       clipboard_max_size = "64";
     };
   };
+
+  services.cliphist.enable = true;
 
   programs.starship = {
     enable = true;
