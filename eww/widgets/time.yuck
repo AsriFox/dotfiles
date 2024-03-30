@@ -1,8 +1,0 @@
-(defpoll t :interval "1s" `date +\"%H:%M:%S\"`)
-
-(defwidget time []
-    (eventbox 
-    (box :class "module last-widget" :space-evenly "false" :orientation "h" :spacing "3" :halign "start"
-        (label :text "󱑂 " :class "time")
-        (label :text t :class "time")
-)))
