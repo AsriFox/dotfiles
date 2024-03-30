@@ -4,6 +4,10 @@ let
     term = "kitty";
     files = "dolphin";
     web = "firefox";
+    launcher = {
+      powermenu =
+        "wlogout -p layer-shell -b 5 -c 10 -L 720 -R 720 -T 600 -B 600";
+    };
     polkit =
       "${pkgs.polkit-kde-agent.outPath}/libexec/polkit-kde-authentication-agent-1";
     wallpaper = "hyprpaper";
@@ -125,6 +129,8 @@ in {
           "$super, T, exec, ${term}"
           "$super, E, exec, ${files}"
           "$super, B, exec, ${web}"
+
+          "$super, Escape, exec, ${launcher.powermenu}"
 
           ", Print, exec, ${screenshot.region}"
           "ALT, Print, exec, ${screenshot.window}"

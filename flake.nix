@@ -42,6 +42,7 @@
             ./shell-programs.nix
             ./hyprland.nix
             ./hyprlock.nix
+            ./wlogout.nix
           ];
           extraSpecialArgs = { inherit inputs; };
         };
