@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let catppuccin = with config.catppuccin; { inherit enable flavour; };
 in {
-  home.packages = with pkgs; [ rustup gcc nixfmt ];
+  home.packages = with pkgs; [ wl-clipboard rustup gcc nixfmt ];
 
   home.sessionVariables = {
     XCURSOR_SIZE = 24;
