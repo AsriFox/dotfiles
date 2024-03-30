@@ -5,6 +5,9 @@ let
     files = "dolphin";
     web = "firefox";
     launcher = {
+      default = "anyrun";
+      clipboard =
+        "anyrun -c ~/.config/anyrun/cliphist | cliphist decode | wl-copy";
       powermenu =
         "wlogout -p layer-shell -b 5 -c 10 -L 720 -R 720 -T 600 -B 600";
     };
@@ -130,6 +133,7 @@ in {
           "$super, E, exec, ${files}"
           "$super, B, exec, ${web}"
 
+          "$super, V, exec, ${launcher.clipboard}"
           "$super, Escape, exec, ${launcher.powermenu}"
 
           ", Print, exec, ${screenshot.region}"
@@ -137,6 +141,8 @@ in {
           "SHIFT, Print, exec, ${screenshot.monitor}"
         ] ++ map (n: "$super, ${n}, workspace, ${n}") workspaces.all
         ++ map (n: "$super SHIFT, ${n}, movetoworkspace, ${n}") workspaces.all;
+
+      bindr = with programs; [ "SUPER, SUPER_L, exec, ${launcher.default}" ];
 
       bindm =
         [ "$super, mouse:272, movewindow" "$super, mouse:273, resizewindow" ];

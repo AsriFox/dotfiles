@@ -10,6 +10,11 @@
     catppuccin.url = "github:Stonks3141/ctp-nix";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    anyrun-cliphist.url = "github:benoitlouy/anyrun-cliphist";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
