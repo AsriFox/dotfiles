@@ -2,6 +2,7 @@ import hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 import audio from 'resource:///com/github/Aylur/ags/service/audio.js';
 import systemtray from 'resource:///com/github/Aylur/ags/service/systemtray.js';
 import { exec } from 'resource:///com/github/Aylur/ags/utils.js';
+import { RoundedCorner } from './roundedCorners.js';
 
 const date = Variable('', {
   poll: [1000, 'date "+%H:%M:%S"'],
@@ -127,31 +128,48 @@ export const StatusBar = (monitor = 0) => Widget.Window({
   exclusivity: 'exclusive',
   child: Widget.CenterBox({
     start_widget: Widget.Box({
-      class_name: 'statusbar-left',
       hpack: 'start',
-      spacing: 20,
       children: [
-        Workspaces,
-        // ClientTitle,
+        Widget.Box({
+          class_name: 'statusbar-left',
+          spacing: 20,
+          children: [
+            Workspaces,
+            // ClientTitle,
+          ],
+        }),
+        RoundedCorner(['top', 'left']),
       ],
     }),
     center_widget: Widget.Box({
-      class_name: 'statusbar-center',
-      spacing: 20,
+      vpack: 'start',
       children: [
-        Clock,
+        RoundedCorner(['top', 'right']),
+        Widget.Box({
+          class_name: 'statusbar-center',
+          spacing: 20,
+          children: [
+            Clock,
+          ],
+        }),
+        RoundedCorner(['top', 'left']),
       ],
     }),
     end_widget: Widget.Box({
-      class_name: 'statusbar-right',
       hpack: 'end',
-      spacing: 20,
       children: [
-        KbLayout,
-        CpuUsage,
-        RamUsage,
-        Volume,
-        SysTray,
+        RoundedCorner(['top', 'right']),
+        Widget.Box({
+          class_name: 'statusbar-right',
+          spacing: 20,
+          children: [
+            KbLayout,
+            CpuUsage,
+            RamUsage,
+            Volume,
+            SysTray,
+          ],
+        }),
       ],
     }),
   }),

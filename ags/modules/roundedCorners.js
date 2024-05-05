@@ -1,13 +1,14 @@
 import Gtk from "gi://Gtk?version=3.0";
 
-export const RoundedCorner = (anchor, r = 25) => {
+export const RoundedCorner = (anchor, class_name = 'corner') => {
   const isTop = anchor.includes('top');
   const isLeft = anchor.includes('left');
   return Widget.DrawingArea({
-    class_name: 'corner',
-    hpack: isTop ? 'start' : 'end',
-    vpack: isLeft ? 'start' : 'end',
+    class_name,
+    vpack: isTop ? 'start' : 'end',
+    hpack: isLeft ? 'start' : 'end',
     setup: self => {
+      const r = self.get_allocated_height();
       self.set_size_request(r, r);
       self.on('draw', (self, cr) => {
         const c = self.get_style_context().get_property('background-color', Gtk.StateFlags.NORMAL);

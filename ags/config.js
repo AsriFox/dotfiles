@@ -4,7 +4,7 @@ import { MonitorRoundedCorners } from './modules/roundedCorners.js';
 export default {
   style: './style.css',
   windows: [
-    StatusBar(1),
+    StatusBar(),
     ...MonitorRoundedCorners(),
   ],
 }

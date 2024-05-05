@@ -6,31 +6,29 @@ window.statusbar {
   color: @theme_fg_color;
 }
 
-.statusbar .clock {
-  background: alpha(@theme_base_color, 0.8);
+.statusbar .corner {
+  background: black;
   border-radius: 18px;
+}
+
+.statusbar-center {
+  background: black;
+  border-radius: 0 0 18px 18px;
   padding: 6px 10px;
-  margin: 3px 0;
+  margin: 0;
 }
 
 .statusbar-left {
-  background: alpha(@theme_base_color, 0.8);
-  border-radius: 0 18px 18px 0;
+  background: black;
+  border-radius: 0 0 18px 0;
   padding: 0 10px;
-  margin: 3px 0;
+  margin: 0;
 }
 
 .statusbar-right {
-  background: alpha(@theme_base_color, 0.8);
-  border-radius: 18px 0 0 18px;
+  background: black;
+  border-radius: 0 0 0 18px;
   padding: 0 10px;
-  margin: 3px 0;
+  margin: 0;
 }
 
-.statusbar .workspaces button.focused {
-  background-color: @theme_fg_color;
-}
-
-.statusbar .client-title {
-  color: @theme_selected_bg_color;
-}
