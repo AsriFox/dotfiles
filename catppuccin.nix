@@ -35,18 +35,19 @@ let
       crust = "181926";
     };
   };
-  catppuccin-qt5ct = builtins.fetchGit {
-    url = "https://github.com/catppuccin/qt5ct";
-    rev = "89ee948e72386b816c7dad72099855fb0d46d41e";
-  };
-  flavour = let fl = config.catppuccin.flavour;
-  in with builtins;
-  lib.toUpper (substring 0 1 fl) + (substring 1 ((stringLength fl) - 1) fl);
+  qtctConf = let
+    catppuccin-qt5ct = builtins.fetchGit {
+      url = "https://github.com/catppuccin/qt5ct";
+      rev = "89ee948e72386b816c7dad72099855fb0d46d41e";
+    };
+    flavour' = let fl = config.catppuccin.flavour;
+    in with builtins;
+    lib.toUpper (substring 0 1 fl) + (substring 1 ((stringLength fl) - 1) fl);
+  in "${catppuccin-qt5ct}/themes/Catppuccin-${flavour'}.conf";
 in with lib; {
   imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
 
   options.catppuccin = with types; {
-    enable = mkEnableOption "Catppuccin theme for use in home-manager";
     palette = mkOption { type = attrsOf str; };
   };
 
@@ -57,8 +58,8 @@ in with lib; {
       enable = true;
       platformTheme = "qtct";
     };
-    xdg.configFile."qt5ct/colors/Catppuccin-${flavour}.conf".source =
-      "${catppuccin-qt5ct}/themes/Catppuccin-${flavour}.conf";
+    xdg.configFile."qt5ct/colors/Catppuccin-${flavour}.conf".source = qtctConf;
+    xdg.configFile."qt6ct/colors/Catppuccin-${flavour}.conf".source = qtctConf;
     # TODO: qt5ct module?
     # xdg.configFile."qt5ct/qt5ct.conf".text = ''
     #   custom_palette=true
