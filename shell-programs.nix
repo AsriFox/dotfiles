@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let catppuccin = with config.catppuccin; { inherit enable flavour; };
 in {
-  home.packages = with pkgs; [ wl-clipboard rustup gcc nixfmt ];
+  home.packages = with pkgs; [ wl-clipboard neovim rustup gcc nixfmt ];
 
   home.sessionVariables = {
     XCURSOR_SIZE = 24;
@@ -30,8 +30,6 @@ in {
     inherit catppuccin;
     config = { pager = "${pkgs.less}/bin/less -FR"; };
   };
-
-  programs.neovim.enable = true;
 
   programs.lazygit = {
     enable = true;
