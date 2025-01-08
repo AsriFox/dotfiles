@@ -1,0 +1,17 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Catfish.profile
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+RemoveWindowTitleBarAndFrame=true
+
+[MainWindow]
+ToolBarsMovable=Disabled
