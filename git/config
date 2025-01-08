@@ -1,0 +1,6 @@
+[credential]
+	helper = "store"
+
+[user]
+	email = "asrifox@yandex.ru"
+	name = "AsriFox"
